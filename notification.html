@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aplications Status Service</title>
+	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="http://jquerymobile.com/demos/1.1.0/docs/_assets/css/jqm-docs.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<link type="text/css" href="css/jquery.mobile.datebox.min.css" rel="stylesheet" />
+	<link type="text/css" href="css/jquery.mobile.simpledialog.min.css" rel="stylesheet" />  
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.datebox.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.simpledialog.min.js"></script>
+	<link type="text/css" href="css/prettify.css" rel="stylesheet" />
+	<script src="notification.js"></script>
+</head>
+<body>
+<div data-role="page" class="type-home" id="incidencias">
+
+	<div data-role="content" >
+		<div data-role="collapsible-set">
+
+	<div data-role="collapsible" data-collapsed="true">
+	<h3>Filtros</h3>
+	<div>
+	<label id="lblSitio"  for="cboSitio">Sitio</Label>
+	<select id="cboSitio" name="cboSitio"  data-native-menu="false" data-mini="false">
+		<option value="0">Seleccione...</option>
+	</select>
+	
+	<label id="lblDesde"  for="dteDesde">Desde</Label>
+	<input name="dteDesde" type="date" data-role="datebox" id="dteDesde" data-options='{"mode": "flipbox"}' />
+	<label id="lblHasta"  for="dteHasta">Hasta</Label>	
+	<input name="dteHata" type="date" data-role="datebox" id="dteHata" data-options='{"mode": "flipbox"}' />
+	</div>
+	</div><!-- collapsible Filtros -->
+	
+</div><!-- collapsible-set -->
+<br>
+		<ul data-role="listview"  data-filter="true" data id="listaErrores" >
+			
+		</ul>
+	</div>
+
+	
+
+</div>
+<div data-role="page" class="type-home" id="detalleIncidencia">
+	<div data-role="header"><h1>Detalles del Error</h1><a href="#" data-rel="back">Atras</a></div>
+	<div data-role="content" class="frmDetalleError">
+	
+
+  
+  <input type="text" id="txtErrorCodigo" value="" placeholder="###" class=""  readonly  /> 
+  <label id="lblSistema" class="form"  for="txtSistema">Sistema</Label>
+  <input type="text" id="txtSistema" value="" placeholder="Sistema" class=" "  readonly  /> 
+  <label id="lblFecha" class="form"  for="txtFecha">Fecha</Label>
+  <input type="text" id="txtFecha" value="" placeholder="Fecha" class="  "  readonly  /> 
+  <label id="lblMensaje" class="form"  for="tarMensaje">Mensaje Error</Label>
+  <textarea id="tarMensaje"  ></textarea>
+  <label id="lblMensajeDetalle" class="form"  for="tarMensajeDetalle">Detalle Error</Label>
+  <textarea id="tarMensajeDetalle"  ></textarea>
+  <label id="lblUsuario" class="form"  for="txtUsuario">Usuario</Label>
+  <input type="text" id="txtUsuario" value="" placeholder="Usuario" class="  "  readonly  /> 
+  <label id="lblIps" class="form"  for="txtIps">Direcciones Ip</Label>
+  <input type="text" id="txtIps" value="" placeholder="000.000.000.000" class="  "  readonly  /> 
+  <label id="lblArchivo" class="form"  for="txtArchivo">Archivo Fuente</Label>
+  <input type="text" id="txtArchivo" value="" placeholder="Archivo.ext" class="  "  readonly  /> 
+  <label id="lblMetodo" class="form"  for="txtMetodo">Metodo</Label>
+  <input type="text" id="txtMetodo" value="" placeholder="Metodo" class="  "  readonly  /> 
+  <label id="lblVersion" class="form"  for="txtVersion">Versión</Label>
+  <input type="text" id="txtVersion" value="" placeholder="0.0.0" class="  "  readonly  /> 
+
+
+
+	</div>
+
+	
+</div>
+</body>
+</html>
